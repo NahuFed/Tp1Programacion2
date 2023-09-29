@@ -1,0 +1,47 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css");
+
+footer a{
+    text-decoration: none;
+    color: rgb(27, 27, 27);
+}
+
+.tarjeta {
+  position: relative;
+  overflow: hidden;
+  border-radius: 16px;
+}
+.tarjeta-img-top {
+  border-radius: 0;
+  height: 20rem;
+  object-fit: cover;
+}
+.tarjeta-body {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  bottom: -600px;
+  background: linear-gradient(#fffefeb4, #ca873471);
+  backdrop-filter: blur(1px);
+  transition: ease-in-out 1s;
+  color: #0a0a0ae1;
+}
+
+.card:hover .card-body {
+  bottom: 0;
+  transition: all 0.8s;
+}
+
+.iconColor {
+  color: #111111be;
+}
+.circle {
+  background-color: #ffffff8e;
+  padding: 10px 10px 9px 10px;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+}
+.circle:hover {
+  background-color: #c58940;
+  box-shadow: 0px 0px 10px #c58940;
+}
