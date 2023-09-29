@@ -100,16 +100,58 @@
 
 // 6-Cree una funcion flecha llamada MixVectores que reciba 2 arrays de numeros deberan unir esos 2 arrays y luego sumar todos esos numeros y mostrarlos x consola.
 
-let array1 = [1,2,4,6]
-let array2 = [2,6,7]
-const MixVectores = (array1,array2) =>{
-    let array3 = array1.concat(array2) ;
-    let sumaTotal=0
-    for (numero of array3){
-        sumaTotal += numero
-    }
-    return sumaTotal;
-}
+// let array1 = [1,2,4,6]
+// let array2 = [2,6,7]
+// const MixVectores = (array1,array2) =>{
+//     let array3 = array1.concat(array2) ;
+//     let sumaTotal=0
+//     for (numero of array3){
+//         sumaTotal += numero
+//     }
+//     return sumaTotal;
+// }
 
 
-console.log(MixVectores(array1,array2))
+// console.log(MixVectores(array1,array2))
+
+// 7-Dado el siguiente vector de nombres
+// const nombres = [ “ roxana  ”,”  ricardo ”,”camila”, ”pablo ”, ”maria   ”,”    carlitos  ”,” luciana  ” ] //note que hay espacios en blanco 
+// Deberá crear una función llamada BuscarNombre para buscar dentro ese array el nombre que introduzca el usuario y luego mostrar x pantalla si se encuentra o no dentro del array.
+
+// const nombres = [ " roxana  ","  ricardo ","camila", "pablo ", "maria   ","    carlitos  "," luciana  " ] //se declara un array de nombres
+
+// function BuscarNombre(nombres){
+//     let nombresTrim = [] // se declara un nuevo array de nombres
+//     for(nombre of nombres){
+//         nombresTrim.push(nombre.trim()) //se agregan los nombres sin espacios al nuevo array
+//     }
+
+//     let nombreBuscado = prompt("ingrese el nombre que desea buscar") //se ingresa por teclado el nombre que se quiere buscar
+//     let seEncontro = nombresTrim.includes(nombreBuscado)//si se encuentra es true si no es false
+
+//     if(seEncontro){
+//         alert("Si se encontro el nombre buscado")//si seEncontro es true se muestra este mensaje
+//     }else
+//     alert("No se encontro el nombre")//Si seEncontro es false se muestra este otro mensaje
+// }
+// BuscarNombre(nombres);//se llama a la funcion y se le pasa el nombre como argumento
+
+// 8-Crear una funcion (arrow function) llamada numPrimos que reciba un array con numeros del 1 al 1000 esta funcion debera calcular todos los numeros primos que hay entre estos numeros y luego mostrarlos a traves del documento separados de un guion intermedio y sin espacios en blanco ej:(2 - 3 - 5 - 7 - etc).debera contar y mostrar la cantidad de numeros primos que encontro con su funcion.
+
+// 9-Escribe una funcion flecha llamada BuscarLetra que reciba un array de palabras y una letra como argumentos la funcion debera retornar un array que solo contenga palabras que contienen esa letra recibida como argumento luego debera mostrar el array resultante en el documento. 
+
+// let palabras = ["asd","qqweeeqwq","eeeeeeeeeeee"]
+// let letra = prompt("ingrese la letra que quiere buscar")
+// const BuscarLetra = (palabras,letra)=>{
+//     let palabrasFiltradas = palabras.filter(palabra => palabra.includes(letra))
+//     return palabrasFiltradas
+// }
+
+// document.write(BuscarLetra(nombres,letra))
+// 10-Deberan crear 2 arrays de numeros los cuales deberan ser completamente aleatorios googlear math.random y math.floor para lograrlo. El usuario debera ingresar x teclado el largo de cada array e ir rellenandolos con esos numeros aleatorios, una vez hecho esto deberan crear una Funcion Flecha llamada DeTodoUnPoco la cual debe recibir esos 2 arrays y hacer los siguiente:
+// A) Concatenar ambos arrays 
+// B) Encontrar el valor mas alto y el mas bajo
+// C) Calcular la cantidad de numeros pares e impares
+// D) Calcular el promedio 
+// E) Sumar todos sus elementos
+// Todo esto deberan mostrar en su documento si quieren pueden utilizar mas de una funcion para las operaciones (queda a su eleccion)
