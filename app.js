@@ -205,7 +205,7 @@ const DeTodoUnPoco = ()=>{//Se declara una funcion
         }
         switch (opcion) {//Se utiliza un switch realizar la operacion que se escoge en el menu
             case "1"://Si elige 1 se muestra el array con ambos arreglos concatenados.
-                document.write('\n'+aleatorios3);//se muestra en el documento los arreglos concatenados(el menu estaba pensado para mostrar los resultados con un alert  pero lo cambiamos porque la consigna pide que sea escrito en el documento 😅)
+                document.write('\n'+aleatorios3);//se muestra en el documento los arreglos concatenados(el menu estaba pensado para mostrar los resultados con un alert pero lo cambiamos porque la consigna pide que sea escrito en el documento 😅)
                 break;
             case "2"://Si elige 2 se calcula el mayor y el menor
                 let mayor = Math.max(...aleatorios3);//Se declara una variable que contiene el numero mayor del arreglo
