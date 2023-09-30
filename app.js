@@ -20,7 +20,7 @@ do{
 function calculos(num1,num2){ //funcion que recibe dos nros
     let suma = num1+num2 // se declara una variable que toma el resultado de la suma de ambos nros
     let resta = num1-num2    // se declara una variable que toma el resultado de la resta de ambos nros
-    document.write(`La suma es ${suma}  <br> La resta es ${resta}`) // se escribe en el documento el resultado de la suma y la resta    
+    document.write(`<br>La suma es ${suma}  <br> La resta es ${resta}`) // se escribe en el documento el resultado de la suma y la resta    
 }
 
 
@@ -99,7 +99,7 @@ function numRango(inicio,fin){ //se declara una funcion que recibe dos parametro
     }
     return numeros //devuelve un array
 }
-document.write(numRango(inicio,fin)) //se escribe el array en el documento llamando a la funcion
+document.write("<br>"+numRango(inicio,fin)) //se escribe el array en el documento llamando a la funcion
 
 // 6-Cree una funcion flecha llamada MixVectores que reciba 2 arrays de numeros deberan unir esos 2 arrays y luego sumar todos esos numeros y mostrarlos x consola.
 
@@ -160,7 +160,9 @@ const numPrimos = () => {//Se declara una arrow function
             nrosPrimos.push(i);
         }        
     }
-    document.write(nrosPrimos);//Se muestran los nros primos en el documento.
+   
+    document.write("<br>"+nrosPrimos.join("-"));//Se muestran los nros primos en el documento con un separador - .
+    document.write(`<br>La cantidad de nros primos del 1 al 1000 es ${nrosPrimos.length}`)//se muetra la longitud del array
 }
 numPrimos();//Se llama a la función.
 
@@ -173,7 +175,7 @@ const BuscarLetra = (palabras,letra)=>{//se declara una funcion que recibe dos p
     return palabrasFiltradas//se retorna el nuevo array con las palabras filtradas por letra
 }
 
-document.write(BuscarLetra(palabras,letra))//se escribe el documento con las palabras filtradas por letra
+document.write("<br>"+BuscarLetra(palabras,letra))//se escribe el documento con las palabras filtradas por letra
 
 // 10-Deberan crear 2 arrays de numeros los cuales deberan ser completamente aleatorios googlear math.random y math.floor para lograrlo. El usuario debera ingresar x teclado el largo de cada array e ir rellenandolos con esos numeros aleatorios, una vez hecho esto deberan crear una Funcion Flecha llamada DeTodoUnPoco la cual debe recibir esos 2 arrays y hacer los siguiente:
 // A) Concatenar ambos arrays 
@@ -205,12 +207,12 @@ const DeTodoUnPoco = ()=>{//Se declara una funcion
         }
         switch (opcion) {//Se utiliza un switch realizar la operacion que se escoge en el menu
             case "1"://Si elige 1 se muestra el array con ambos arreglos concatenados.
-                document.write('\n'+aleatorios3);//se muestra en el documento los arreglos concatenados(el menu estaba pensado para mostrar los resultados con un alert pero lo cambiamos porque la consigna pide que sea escrito en el documento 😅)
+                document.write('<br>'+aleatorios3);//se muestra en el documento los arreglos concatenados(el menu estaba pensado para mostrar los resultados con un alert pero lo cambiamos porque la consigna pide que sea escrito en el documento 😅)
                 break;
             case "2"://Si elige 2 se calcula el mayor y el menor
                 let mayor = Math.max(...aleatorios3);//Se declara una variable que contiene el numero mayor del arreglo
                 let menor = Math.min(...aleatorios3);//Se declara una variable que contiene el numero menor del arreglo
-                document.write(`\nEl numero mayor es: ${mayor}\nEl numero menor es: ${menor}`);//Se muestra en pantalla el nro mayor y el menor
+                document.write(`<br>El numero mayor es: ${mayor}\nEl numero menor es: ${menor}`);//Se muestra en pantalla el nro mayor y el menor
                 break;
             case "3"://Si elige 3 se calcula la cantidad de pares e impares
                 let impares=0;//Se declara un contador de impares
@@ -222,17 +224,17 @@ const DeTodoUnPoco = ()=>{//Se declara una funcion
                         impares++;//se suma 1 al contador de impares
                      }
                 }
-                document.write(`\nLa cantidad de numeros pares es: ${pares}\nLa cantidad de numeros impares es: ${impares}`);//Se muestra en pantalla la cantidad de pares e impares
+                document.write(`<br>La cantidad de numeros pares es: ${pares}\nLa cantidad de numeros impares es: ${impares}`);//Se muestra en pantalla la cantidad de pares e impares
                 break;
             case "4"://Si elige 4 se calcula el promedio de la suma de todos los nros
                 let promedio = suma/aleatorios3.length;//Se declara una variable que calcula el promedio de la suma de todos los numeros
-                document.write(`\nEl promedio de la suma de los numeros ingresados es ${promedio}`);//Se muestra en pantalla el promedio
+                document.write(`<br>El promedio de la suma de los numeros ingresados es ${promedio}`);//Se muestra en pantalla el promedio
                 break;
             case "5"://Si elige 5 se muestra la suma de todos los nros
-                document.write(`\nLa suma de todos los elementos es ${suma}`);//Se muestra en pantalla la suma de todos los numeros
+                document.write(`<br>La suma de todos los elementos es ${suma}`);//Se muestra en pantalla la suma de todos los numeros
                 break;
             default://Si no se selecciona un numero del 1 al 5 muestra un mensaje de advertencia
-                document.write("\nSeleccione una opcion valida");
+                alert("\nSeleccione una opcion valida");
                 break;
         }
     }while (confirm("Presione cancelar para salir o aceptar para continuar."));//Se le pregunta al usuario si desea volver a ver el menu
