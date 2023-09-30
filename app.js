@@ -26,153 +26,155 @@ function calculos(num1,num2){ //funcion que recibe dos nros
 
 // // 2-Crear una función llamada CalcPromedio que reciba un array de 5 números y luego deberán mostrar x pantalla el promedio total de esos números los cuales deberán ser pedidos al usuario a través de prompts y almacenados en un array 
 
-// let numeros=[] // se declara un array
+let numeros=[] // se declara un array
 
-// for (let i = 0; i<5;i++) { //se usa un for para cargar el array con 5 numeros    
-//     numeros.push(parseInt(prompt(`Ingrese el ${i+1}º nro`))) //se agregan los nros al array de numeros
-// }
+for (let i = 0; i<5;i++) { //se usa un for para cargar el array con 5 numeros    
+    numeros.push(parseInt(prompt(`Ingrese el ${i+1}º nro`))) //se agregan los nros al array de numeros
+}
 
-// function CalcPromedio(numeros){ // se declara una funcion que recibe un array de numeros
-//     let suma = 0 // se declara una variable acumuladora
-//     let promedio //se declara una variable para almacenar el promedio
+function CalcPromedio(numeros){ // se declara una funcion que recibe un array de numeros
+    let suma = 0 // se declara una variable acumuladora
+    let promedio //se declara una variable para almacenar el promedio
 
-//     for (numero of numeros){ // se utiliza un for of para recorrer el array y agregar los valores al acumulador
-//         suma += numero//se suman los valores
-//     }
-//     promedio = suma / numeros.length //se calcula el promedio dividiendo la suma por la longitud del array
-//  alert(`El promedio del array es ${promedio}`)//se muestra un mensaje mostrando el promedio
-// }
+    for (numero of numeros){ // se utiliza un for of para recorrer el array y agregar los valores al acumulador
+        suma += numero//se suman los valores
+    }
+    promedio = suma / numeros.length //se calcula el promedio dividiendo la suma por la longitud del array
+ alert(`El promedio del array es ${promedio}`)//se muestra un mensaje mostrando el promedio
+}
 
-// CalcPromedio(numeros);
+CalcPromedio(numeros);//se llama a la funcion CalcPromedio
 
 // // 3-En el ejercicio anterior deberán agregar las validaciones correspondientes (puede ser con metodos) para que el usuario no ingrese valores nulos, valores vacios “ ” ni tampoco espacios en blanco informar al usuario en caso contrario
 
-// let numeros2=[]//se declara una variable de tipo array
+let numeros2=[]//se declara una variable de tipo array
 
-// function ingresarNumerosValidado(){ //se declara una funcion que no recibe parametros
-// for (let i = 0; i<5;i++){//con un for se cargan 5 numeros
+function ingresarNumerosValidado(){ //se declara una funcion que no recibe parametros
+for (let i = 0; i<5;i++){//con un for se cargan 5 numeros
     
-//     //ciclo do while, lo usamos para validar que si o si se ingrese un nro
-//     do{
-//     numeroIngresado =parseInt(prompt(`Ingrese el ${i+1}º nro`)) //se ingresa por teclado el nro
-//         if(isNaN(numeroIngresado)){ //se utiliza un if para saber si no es un numero
-//             alert("Por favor ingrese un valor correcto") //si no se ingresa un nro se advierte  
-//         } else
-//         numeros2.push(numeroIngresado)// si es un numero entonces se agrega al array
-//     } while(isNaN(numeroIngresado)) // si no es un numero, se vuelve a pedir que ingrese el nro de la posicion actual
-// }
-// }
-// ingresarNumerosValidado();// se llama a la funcion ingresarNumerosValidado
+    //ciclo do while, lo usamos para validar que si o si se ingrese un nro
+    do{
+    numeroIngresado =parseInt(prompt(`Ingrese el ${i+1}º nro`)) //se ingresa por teclado el nro
+        if(isNaN(numeroIngresado)){ //se utiliza un if para saber si no es un numero
+            alert("Por favor ingrese un valor correcto") //si no se ingresa un nro se advierte  
+        } else
+        numeros2.push(numeroIngresado)// si es un numero entonces se agrega al array
+    } while(isNaN(numeroIngresado)) // si no es un numero, se vuelve a pedir que ingrese el nro de la posicion actual
+}
+}
+ingresarNumerosValidado();// se llama a la funcion ingresarNumerosValidado
 
-// function CalcPromedio2(numeros){ //se declara una funcion que recibe un array como parametro
-//     let suma = 0 //se declara una variable acumuladora
-//     let promedio //se declara una variable para almacenar el promedio
+function CalcPromedio2(numeros){ //se declara una funcion que recibe un array como parametro
+    let suma = 0 //se declara una variable acumuladora
+    let promedio //se declara una variable para almacenar el promedio
 
-//     for (numero of numeros){// se utiliza un for of para recorrer el array y agregar los valores al acumulador
-//         suma += numero //se suman los valores
-//     }
-//     promedio = suma / numeros.length //se calcula el promedio dividiendo la suma por la longitud del array
-//  alert(`El promedio del array es ${promedio}`) //se muestra un mensaje mostrando el promedio
-// }
-//  CalcPromedio2(numeros2); //se llama ala funcion CalcPromedio2
+    for (numero of numeros){// se utiliza un for of para recorrer el array y agregar los valores al acumulador
+        suma += numero //se suman los valores
+    }
+    promedio = suma / numeros.length //se calcula el promedio dividiendo la suma por la longitud del array
+ alert(`El promedio del array es ${promedio}`) //se muestra un mensaje mostrando el promedio
+}
+ CalcPromedio2(numeros2); //se llama a la funcion CalcPromedio2
 
 // // 4-Debera crer una funcion SaludarPersona que reciba un nombre y una edad x argumentos esos valores pedirlos al usuario x prompts y si la edad ingresada es mayor a 18 mostrar un mensaje en el documento que diga “Bienvenido Senior” de lo contrario “Welcome Junior” 
 
-// let edad = parseInt(prompt("Ingrese su edad")) //se declara una variable y se le asigna un valor por teclado convertido a int
-// let nombre = prompt("Ingrese su nombre") //se declara una variable y se le asigna un valor por teclado
+let edad = parseInt(prompt("Ingrese su edad")) //se declara una variable y se le asigna un valor por teclado convertido a int
+let nombre = prompt("Ingrese su nombre") //se declara una variable y se le asigna un valor por teclado
 
-// function SaludarPersona(nombre,edad){// se declara una funcion que recibe dos parametros
-//        edad>18?alert(`Bienvenido Senior ${nombre}`):alert(`Welcome Junior ${nombre}`) ; //se utiliza un if ternario con la condicion de que sea mayor a 18, en el caso positivo se muestra un mensaje y en el else(:) se muestra otro
-// }
+function SaludarPersona(nombre,edad){// se declara una funcion que recibe dos parametros
+       edad>18?alert(`Bienvenido Senior ${nombre}`):alert(`Welcome Junior ${nombre}`) ; //se utiliza un if ternario con la condicion de que sea mayor a 18, en el caso positivo se muestra un mensaje y en el else(:) se muestra otro
+}
 
-// SaludarPersona(nombre,edad) //se llama a la funcion SaludarPersona
+SaludarPersona(nombre,edad) //se llama a la funcion SaludarPersona
 
 // // 5-Crear una funcion llamada numRango que tome 2 valores como argumentos (inicio y fin) y devuelva un array de numeros que incluya todos los enteros dentro de ese rango y mostrarlos a traves del documento 
 
-// let inicio = parseInt(prompt("ingrese el numero de inicio")) //se declara una variable y se le asigna un valor por teclado que representa el inicio
-// let fin = parseInt(prompt("ingrese el numero de fin")) //se declara una variable y se le asigna un valor por teclado que representa el fin
+let inicio = parseInt(prompt("ingrese el numero de inicio")) //se declara una variable y se le asigna un valor por teclado que representa el inicio
+let fin = parseInt(prompt("ingrese el numero de fin")) //se declara una variable y se le asigna un valor por teclado que representa el fin
 
-// function numRango(inicio,fin){ //se declara una funcion que recibe dos parametros
-//     let numeros = [] //se declara una variable de tipo array
-//     for(let i = inicio; i<=fin;i++){ //se utiliza un for para cargar el array con valores enteros desde el inicio hasta el fin
-//         numeros.push(i); //se agrega un valor al array
-//     }
-//     return numeros //devuelve un array
-// }
-// document.write(numRango(inicio,fin))
+function numRango(inicio,fin){ //se declara una funcion que recibe dos parametros
+    let numeros = [] //se declara una variable de tipo array
+    for(let i = inicio; i<=fin;i++){ //se utiliza un for para cargar el array con valores enteros desde el inicio hasta el fin
+        numeros.push(i); //se agrega un valor al array
+    }
+    return numeros //devuelve un array
+}
+document.write(numRango(inicio,fin)) //se escribe el array en el documento llamando a la funcion
 
 // 6-Cree una funcion flecha llamada MixVectores que reciba 2 arrays de numeros deberan unir esos 2 arrays y luego sumar todos esos numeros y mostrarlos x consola.
 
-// let array1 = [1,2,4,6]
-// let array2 = [2,6,7]
-// const MixVectores = (array1,array2) =>{
-//     let array3 = array1.concat(array2) ;
-//     let sumaTotal=0
-//     for (numero of array3){
-//         sumaTotal += numero
-//     }
-//     return sumaTotal;
-// }
+let array1 = [1,2,4,6]//se declara un array con 4 numeros
+let array2 = [2,6,7]//se declara un array con 3 numeros
+const MixVectores = (array1,array2) =>{//se utiliza una funcion flecha que recibe 2 parametros
+    let array3 = array1.concat(array2) ;//se declara un array nuevo que concatenara ambos arrays previamente definidos
+    let sumaTotal=0//se declara un acumulador y se le asigna un valor en 0
+    for (numero of array3){//se utiliza un for of para recorrer los numeros del array
+        sumaTotal += numero//se suman todos los numeros y se los guarda en el acumulador
+    }
+    return sumaTotal;//se retorna el valor del acumulador sumaTotal
+}
 
 
-// console.log(MixVectores(array1,array2))
+console.log(MixVectores(array1,array2))//se muestra por consola el nuevo array
 
 // 7-Dado el siguiente vector de nombres
 // const nombres = [ “ roxana  ”,”  ricardo ”,”camila”, ”pablo ”, ”maria   ”,”    carlitos  ”,” luciana  ” ] //note que hay espacios en blanco 
 // Deberá crear una función llamada BuscarNombre para buscar dentro ese array el nombre que introduzca el usuario y luego mostrar x pantalla si se encuentra o no dentro del array.
 
-// const nombres = [ " roxana  ","  ricardo ","camila", "pablo ", "maria   ","    carlitos  "," luciana  " ] //se declara un array de nombres
+const nombres = [ " roxana  ","  ricardo ","camila", "pablo ", "maria   ","    carlitos  "," luciana  " ] //se declara un array de nombres
 
-// function BuscarNombre(nombres){
-//     let nombresTrim = [] // se declara un nuevo array de nombres
-//     for(nombre of nombres){
-//         nombresTrim.push(nombre.trim()) //se agregan los nombres sin espacios al nuevo array
-//     }
+function BuscarNombre(nombres){
+    let nombresTrim = [] // se declara un nuevo array de nombres
+    for(nombre of nombres){
+        nombresTrim.push(nombre.trim()) //se agregan los nombres sin espacios al nuevo array
+    }
 
-//     let nombreBuscado = prompt("ingrese el nombre que desea buscar") //se ingresa por teclado el nombre que se quiere buscar
-//     let seEncontro = nombresTrim.includes(nombreBuscado)//si se encuentra es true si no es false
+    let nombreBuscado = prompt("ingrese el nombre que desea buscar") //se ingresa por teclado el nombre que se quiere buscar
+    let seEncontro = nombresTrim.includes(nombreBuscado)//si se encuentra es true si no es false
 
-//     if(seEncontro){
-//         alert("Si se encontro el nombre buscado")//si seEncontro es true se muestra este mensaje
-//     }else
-//     alert("No se encontro el nombre")//Si seEncontro es false se muestra este otro mensaje
-// }
-// BuscarNombre(nombres);//se llama a la funcion y se le pasa el nombre como argumento
+    if(seEncontro){
+        alert("Si se encontro el nombre buscado")//si seEncontro es true se muestra este mensaje
+    }else
+    alert("No se encontro el nombre")//Si seEncontro es false se muestra este otro mensaje
+}
+BuscarNombre(nombres);//se llama a la funcion y se le pasa el nombre como argumento
 
 /*8-Crear una funcion (arrow function) llamada numPrimos que reciba un array con numeros del 1 al 1000 esta funcion debera calcular todos los numeros primos que hay entre estos numeros y luego mostrarlos a traves del documento separados de un guion intermedio y sin espacios en blanco ej:(2 - 3 - 5 - 7 - etc).debera contar y mostrar la cantidad de numeros primos que encontro con su funcion.*/
-// function esPrimo(numero) { //Se crea una función para determinar si un nro es primo o no
-//     if (numero <= 1) return false; //Comprueba si el nro es mayor o igual a 1 porque los nros primos son mayores a 1
-//     if (numero <= 3) return true; //Comprueba si el nro es 2 o 3, que son primos
-//     if (numero % 2 === 0 ||  numero % 3 === 0) return false;//Comprueba si el nro es divisible por 2 o 3, si es así, es primo.
-//   //Se utiliza un for para comprobar la divisibilidad por nros de la forma 6k+-1, donde k es un nro entero hasta la raiz cuadrada del nro.
-//     for (let i = 5; i * i <= numero; i += 6) {
-//       if (numero % i === 0 || numero % (i + 2) === 0) { //Comprueba si el nro es divisible por i o por i+2, si es así, no es primo.
-//         return false;
-//       }
-//     }
-//     return true;//Si no se ha encontrado ninguna divisibilidad, el nro es primo
-//   }
-// const numPrimos = () => {//Se declara una arrow function 
-//     let nrosPrimos = [];//Se declara una variable de tipo array
-//     for (let i = 1; i <= 1000; i++) {//Se utiliza un bucle para recorrer los nros del 1 al 1000
-//         if (esPrimo(i)) {//Si el nro es primo, se lo carga al array
-//             nrosPrimos.push(i);
-//         }        
-//     }
-//     document.write(nrosPrimos);//Se muestran los nros primos en el documento.
-// }
-// numPrimos();//Se llama a la función.
+
+function esPrimo(numero) { //Se crea una función para determinar si un nro es primo o no
+    if (numero <= 1) return false; //Comprueba si el nro es mayor o igual a 1 porque los nros primos son mayores a 1
+    if (numero <= 3) return true; //Comprueba si el nro es 2 o 3, que son primos
+    if (numero % 2 === 0 ||  numero % 3 === 0) return false;//Comprueba si el nro es divisible por 2 o 3, si es así, es primo.
+  //Se utiliza un for para comprobar la divisibilidad por nros de la forma 6k+-1, donde k es un nro entero hasta la raiz cuadrada del nro.
+    for (let i = 5; i * i <= numero; i += 6) {
+      if (numero % i === 0 || numero % (i + 2) === 0) { //Comprueba si el nro es divisible por i o por i+2, si es así, no es primo.
+        return false;
+      }
+    }
+    return true;//Si no se ha encontrado ninguna divisibilidad, el nro es primo
+  }
+const numPrimos = () => {//Se declara una arrow function 
+    let nrosPrimos = [];//Se declara una variable de tipo array
+    for (let i = 1; i <= 1000; i++) {//Se utiliza un bucle para recorrer los nros del 1 al 1000
+        if (esPrimo(i)) {//Si el nro es primo, se lo carga al array
+            nrosPrimos.push(i);
+        }        
+    }
+    document.write(nrosPrimos);//Se muestran los nros primos en el documento.
+}
+numPrimos();//Se llama a la función.
 
 // 9-Escribe una funcion flecha llamada BuscarLetra que reciba un array de palabras y una letra como argumentos la funcion debera retornar un array que solo contenga palabras que contienen esa letra recibida como argumento luego debera mostrar el array resultante en el documento. 
 
-// let palabras = ["asd","qqweeeqwq","eeeeeeeeeeee"]
-// let letra = prompt("ingrese la letra que quiere buscar")
-// const BuscarLetra = (palabras,letra)=>{
-//     let palabrasFiltradas = palabras.filter(palabra => palabra.includes(letra))
-//     return palabrasFiltradas
-// }
+palabras = ["manzana", "perro", "sol", "montaña", "agua"]//se declara un array de palabras
+let letra = prompt("ingrese la letra que quiere buscar")//se pide al usuario que ingrese una letra por teclado
+const BuscarLetra = (palabras,letra)=>{//se declara una funcion que recibe dos parametros
+    let palabrasFiltradas = palabras.filter(palabra => palabra.includes(letra))//se utiliza filter para filtrar el array con las palabras que incluyan esa letra, y se la asigna a un nuevo array
+    return palabrasFiltradas//se retorna el nuevo array con las palabras filtradas por letra
+}
 
-// document.write(BuscarLetra(nombres,letra))
+document.write(BuscarLetra(palabras,letra))//se escribe el documento con las palabras filtradas por letra
+
 // 10-Deberan crear 2 arrays de numeros los cuales deberan ser completamente aleatorios googlear math.random y math.floor para lograrlo. El usuario debera ingresar x teclado el largo de cada array e ir rellenandolos con esos numeros aleatorios, una vez hecho esto deberan crear una Funcion Flecha llamada DeTodoUnPoco la cual debe recibir esos 2 arrays y hacer los siguiente:
 // A) Concatenar ambos arrays 
 // B) Encontrar el valor mas alto y el mas bajo
