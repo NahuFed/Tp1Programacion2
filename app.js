@@ -204,35 +204,35 @@ const DeTodoUnPoco = ()=>{//Se declara una funcion
             suma+=numero;
         }
         switch (opcion) {//Se utiliza un switch realizar la operacion que se escoge en el menu
-            case "1":
-                alert(aleatorios3);//Si elige 1 se muestra el array con ambos arreglos concatenados.
+            case "1"://Si elige 1 se muestra el array con ambos arreglos concatenados.
+                document.write('\n'+aleatorios3);//se muestra en el documento los arreglos concatenados(el menu estaba pensado para mostrar los resultados con un alert  pero lo cambiamos porque la consigna pide que sea escrito en el documento 😅)
                 break;
-            case "2":
+            case "2"://Si elige 2 se calcula el mayor y el menor
                 let mayor = Math.max(...aleatorios3);//Se declara una variable que contiene el numero mayor del arreglo
                 let menor = Math.min(...aleatorios3);//Se declara una variable que contiene el numero menor del arreglo
-                alert(`El numero mayor es: ${mayor}\nEl numero menor es: ${menor}`);//Se muestra en pantalla el nro mayor y el menor
+                document.write(`\nEl numero mayor es: ${mayor}\nEl numero menor es: ${menor}`);//Se muestra en pantalla el nro mayor y el menor
                 break;
-            case "3":
-                let impares=0;//Se declara un acumulador de impares
-                let pares=0;//Se declara un acumulador de pares
+            case "3"://Si elige 3 se calcula la cantidad de pares e impares
+                let impares=0;//Se declara un contador de impares
+                let pares=0;//Se declara un contador de pares
                 for (numero of aleatorios3) {//Se utiliza un forof para determinar si los numeros son pares o impares y acumular la variable correspondiente
                      if (numero%2===0) {
-                        pares++;
+                        pares++;//se suma 1 al contador de pares
                      }else{
-                        impares++;
+                        impares++;//se suma 1 al contador de impares
                      }
                 }
-                alert(`La cantidad de numeros pares es: ${pares}\nLa cantidad de numeros impares es: ${impares}`);//Se muestra en pantalla la cantidad de pares e impares
+                document.write(`\nLa cantidad de numeros pares es: ${pares}\nLa cantidad de numeros impares es: ${impares}`);//Se muestra en pantalla la cantidad de pares e impares
                 break;
-            case "4":
+            case "4"://Si elige 4 se calcula el promedio de la suma de todos los nros
                 let promedio = suma/aleatorios3.length;//Se declara una variable que calcula el promedio de la suma de todos los numeros
-                alert(`El promedio de la suma de los numeros ingresados es ${promedio}`);//Se muestra en pantalla el promedio
+                document.write(`\nEl promedio de la suma de los numeros ingresados es ${promedio}`);//Se muestra en pantalla el promedio
                 break;
-            case "5":
-                alert(`La suma de todos los elementos es ${suma}`);//Se muestra en pantalla la suma de todos los numeros
+            case "5"://Si elige 5 se muestra la suma de todos los nros
+                document.write(`\nLa suma de todos los elementos es ${suma}`);//Se muestra en pantalla la suma de todos los numeros
                 break;
             default://Si no se selecciona un numero del 1 al 5 muestra un mensaje de advertencia
-                alert("Seleccione una opcion valida");
+                document.write("\nSeleccione una opcion valida");
                 break;
         }
     }while (confirm("Presione cancelar para salir o aceptar para continuar."));//Se le pregunta al usuario si desea volver a ver el menu
